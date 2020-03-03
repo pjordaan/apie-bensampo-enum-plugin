@@ -1,0 +1,31 @@
+{
+    "name": "w2w/apie-bensampo-enum-plugin",
+    "description": "Adds enums from bensampo/laravel-enum to Apie",
+    "type": "library",
+    "require": {
+        "php": "^7.2",
+        "bensampo/laravel-enum": ">=1.19",
+        "w2w/apie": "^3.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.6.*",
+        "phpunit/phpunit": "^7.0|^8.0"
+    },
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Pieter Jordaan",
+            "email": "pieter.jordaan@way2web.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "W2w\\Lib\\ApieBenSampoEnumPlugin\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "W2w\\Test\\ApieBenSampoEnumPlugin\\": "tests/"
+        }
+    }
+}
