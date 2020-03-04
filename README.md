@@ -11,3 +11,4 @@ Add W2w\Lib\ApieBenSampoEnumPlugin\BenSampoEnumPlugin to the list of Apie plugin
 bensampo/laravel-enum.
 
 ## Localization strings
+The localization strings for enums are not used. In case you want to localize this, you require to make your own normalizer.
