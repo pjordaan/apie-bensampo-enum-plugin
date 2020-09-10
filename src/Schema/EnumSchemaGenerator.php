@@ -3,6 +3,7 @@
 namespace W2w\Lib\ApieBenSampoEnumPlugin\Schema;
 
 use erasys\OpenApi\Spec\v3\Schema;
+use W2w\Lib\Apie\OpenApiSchema\OpenApiSchemaGenerator;
 use W2w\Lib\Apie\OpenApiSchema\SchemaGenerator;
 use W2w\Lib\Apie\PluginInterfaces\DynamicSchemaInterface;
 
@@ -16,8 +17,8 @@ class EnumSchemaGenerator implements DynamicSchemaInterface
         string $operation,
         array $groups,
         int $recursion,
-        SchemaGenerator $generator
-    ) {
+        OpenApiSchemaGenerator $generator
+    ): ?Schema {
         $enumValues = array_values(array_unique($resourceClass::getValues()));
         if ($operation !== 'get') {
             $enumKeys = $resourceClass::getKeys();
